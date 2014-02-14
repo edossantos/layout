@@ -10,7 +10,10 @@ requirejs.config({
     json2: "vendor/json2",
     underscore: "vendor/underscore",
     text: "vendor/text",
-    bootstrap: "vendor/bootstrap.min"
+    bootstrap: "vendor/bootstrap.min",
+    "jssor-core": "vendor/jssor.core",
+    "jssor-slider": "vendor/jssor.slider",
+    "jssor-utils": "vendor/jssor.utils"
   },
 
   shim: {

@@ -33,7 +33,7 @@ define(["app"], function(layoutApp){
 			return menus;
 			},
 			getMenuEntity: function(menuItemId){
-				var menu = new Entities.Menu({id: menuItemId});
+				var menus = new Entities.Menu({id: menuItemId});
 				menus.fetch();
 				return menus;
 			}
@@ -43,7 +43,7 @@ define(["app"], function(layoutApp){
 			
 		});
 		layoutApp.reqres.setHandler("menu:entity", function(){
-		
+
 			return API.getMenuEntity(id);
 			
 		});

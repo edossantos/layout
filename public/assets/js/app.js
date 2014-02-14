@@ -25,13 +25,16 @@ define(["marionette"], function(Marionette){
 		//layoutApp.mainRegion.show(IndexView);
 
 		if(Backbone.history){
+			//require files app from each app
 			require(["apps/index/header/header_app", "apps/index/home/home_app", "apps/index/menu/menu_app"], function(){
 			Backbone.history.start();
 			if(layoutApp.getCurrentRoute() === ""){
 				console.log("index yo");
+				//if current route is root of URL trigger index:layout
 				layoutApp.trigger("index:layout");
 			}else if(layoutApp.getCurrentRoute() === "menu"){
-				layoutApp.trigger("index:menu", this.model);
+				//else if cuurent route is menu trigger index:menu
+				layoutApp.trigger("index:menu");
 				console.log("menu from appjs yo");
 			}
 		});
