@@ -1,0 +1,38 @@
+//Variables for menu page
+@base-color: #c71e1e;
+@white: #fff;
+.header-mixin(@x){
+  -webkit-border-top-left-radius: @x;
+  -webkit-border-top-right-radius: @x;
+  -moz-border-radius-topleft: @x;
+  -moz-border-radius-topright: @x;
+  border-top-left-radius: @x;
+  border-top-right-radius: @x;
+}
+.menu-header-appetizer{
+  margin-top: 50px;
+  margin-bottom: 10px;
+  background: @base-color;
+  width: 100%;
+  height: 80px;
+  .header-mixin(10px);
+}
+.menu-header-lunch:extend(.menu-header-appetizer){};
+.menu-header-dinner:extend(.menu-header-appetizer){};
+.menu-header-dessert:extend(.menu-header-appetizer){};
+
+.menu-header-appetizer h1{
+  padding-top: 20px;
+  text-align: center;
+  color: @white;
+  font-size: 30px;
+  font-family: 'Original Surfer', cursive;
+}
+.menu-header-lunch h1:extend(.menu-header-appetizer h1){};
+.menu-header-dinner h1:extend(.menu-header-appetizer h1){};
+.menu-header-dessert h1:extend(.menu-header-appetizer h1){};
+
+.menu img{
+  width: 200px;
+  height: 100px;
+}

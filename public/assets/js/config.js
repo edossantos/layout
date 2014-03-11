@@ -11,9 +11,20 @@ requirejs.config({
     underscore: "vendor/underscore",
     text: "vendor/text",
     bootstrap: "vendor/bootstrap.min",
+    handlebars: "vendor/handlebars",
+    ifconfhelper: "helpers/ifconf",
     "jssor-core": "vendor/jssor.core",
     "jssor-slider": "vendor/jssor.slider",
-    "jssor-utils": "vendor/jssor.utils"
+    "jssor-utils": "vendor/jssor.utils",
+    modernizr: "vendor/modernizr",
+    "hammer": "vendor/hammer",
+    "jquery-hammer": "vendor/jquery.hammer",
+    "backbone-hammer": "vendor/backbone.hammer",
+    "picker-legacy": "vendor/legacy",
+    "picker": "vendor/picker",
+    "pickerDate": "vendor/picker.date",
+    "pickerTime": "vendor/picker.time",
+    "main-picker": "vendor/main"
   },
 
   shim: {
@@ -33,10 +44,24 @@ requirejs.config({
     "jquery-ui": ["jquery"],
     bootstrap: {
       deps: ["jquery"]
+    },
+
+    handlebars: {
+      exports: "Handlebars"
+    },
+    "picker": ["jquery", "picker-legacy"],
+    "pickerDate": {
+        deps: ["jquery", "picker"],
+        exports: "pickadate"
+    },
+    "pickerTime": {
+        deps: ["jquery", "picker"],
+        exports: "pickatime"
     }
   }
 });
 
-require(["app", "bootstrap"], function(layoutApp){
+require(["app", "bootstrap", "apps/header/header_app", "apps/footer/footer_app"], function(layoutApp){
   layoutApp.start();
+
 });

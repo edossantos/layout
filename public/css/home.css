@@ -1,0 +1,341 @@
+#restaurant img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+#restaurant .square,
+#blog .square {
+  z-index: 1;
+  background: #111;
+  height: 200px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+}
+#restaurant .square-big,
+#blog .square-big {
+  height: 420px;
+}
+.is-loaded {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.square-big img {
+  width: 630px;
+  height: 320px;
+}
+#restaurant,
+#blog {
+  padding-top: 50px;
+}
+#restaurant .square > i,
+#blog .square > i {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 30px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+#restaurant .square:hover img,
+#blog .square:hover img {
+  opacity: 0.1;
+  /*-webkit-transform: scale(1.1,1.1);*/
+}
+#restaurant .square:hover .square-header,
+#blog .square:hover .square-header {
+  opacity: 0;
+  -webkit-transform: translate(0, -10px);
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -transition-delay: 0s;
+}
+#restaurant .square:hover .square-post,
+#blog .square:hover .square-post {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -transition-delay: 0.2s;
+}
+#restaurant .square:hover i,
+#blog .square:hover i {
+  opacity: 1;
+}
+#restaurant .square-header .title,
+#blog .square-header .title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
+}
+#restaurant .square-header .description,
+#blog .square-header .description {
+  font-size: 24px;
+  color: #9E9E9E;
+  font-weight: 200;
+  margin: 0;
+}
+#restaurant .square-header .description strong,
+#blog .square-header .description strong {
+  color: #fff;
+}
+#restaurant .square-post,
+#blog .square-post,
+#blog .square-post i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  padding: 15px 20px;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.5s;
+  -webkit-transform: translate(0, 10px);
+  -moz-transition: -moz-transform 0.3s, opacity 0.5s;
+  -moz-transform: translate(0, 10px);
+  -ms-transition: -ms-transform 0.3s, opacity 0.5s;
+  -ms-transform: translate(0, 10px);
+  transition: -webkit-transform 0.3s, opacity 0.5s;
+  transform: translate(0, 10px);
+}
+#restaurant .square-post .title,
+#blog .square-post .title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0 0 5px 0;
+  line-height: 1em;
+}
+#restaurant .square-post .description,
+#blog .square-post .description {
+  font-size: 16px;
+  color: #9E9E9E;
+  font-weight: 200;
+  margin: 0;
+  line-height: 1.5em;
+}
+#restaurant .square-post .description strong,
+#blog .square-post .description strong {
+  color: #fff;
+}
+#restaurant .square-post .days,
+#blog .square-post .days {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #9E9E9E;
+  font-weight: 200;
+}
+#restaurant .square-post .days li,
+#blog .square-post .days li {
+  font-size: 18px;
+}
+#restaurant .square-post .days strong,
+#blog .square-post .days strong {
+  color: #fff;
+}
+#restaurant .square-post .days span,
+#blog .square-post .days span {
+  display: inline-block;
+  width: 28px;
+  margin-right: 10px;
+  text-align: right;
+}
+#restaurant .square-post,
+#blog .square-post,
+#blog .square-post i {
+  position: static;
+}
+#restaurant .slide-switch {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+#restaurant .slide-switch li,
+#blog .slide-switch li {
+  display: inline-block;
+}
+#restaurant .slide-switch i,
+#blog .slide-switch i {
+  position: static;
+  font-size: 16px;
+}
+#slide {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+.square-item {
+  height: 100% !important;
+}
+#restaurant #carousel-menu,
+#blog #carousel-menu {
+  height: 100%;
+}
+#restaurant #carousel-menu .item,
+#blog #carousel-menu .item {
+  height: 100% ;
+}
+#restaurant #carousel-menu .item img,
+#blog #carousel-menu .item img {
+  height: 100% !important;
+  width: 100% !important;
+}
+#restaurant #carousel-menu .square-item,
+#blog #carousel-menu .square-item {
+  height: 100% !important;
+}
+.container-fluid {
+  padding-left: 298px!important;
+  padding-right: 15px;
+  margin-top: -3%;
+}
+#restaurant .square:hover .square-header,
+#blog .square:hover .square-header,
+#blog .square:hover .square-header {
+  opacity: 0;
+  -webkit-transform: translate(0, -10px);
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  -transition-delay: 0s;
+}
+#restaurant .square:hover .square-post,
+#blog .square:hover .square-post,
+#blog .square:hover .square-post {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  -ms-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  -transition-delay: 0.2s;
+}
+#restaurant .square:hover i,
+#blog .square:hover i,
+#blog .square:hover i {
+  opacity: 1;
+}
+#restaurant .square-big,
+#blog .square-big,
+#blog .square-big {
+  height: 420px;
+}
+#restaurant img,
+#blog img {
+  height: 100%;
+  display: block;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+#restaurant .square-header,
+#blog .square-header {
+  -webkit-transition-delay: 2s;
+  -moz-transition-delay: 2s;
+  transition-delay: 2s;
+  -ms-transition-delay: 2s;
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  line-height: 1em;
+  font-size: 32px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5px 10px;
+  -webkit-transition: -webkit-transform 0.3s 0.2s, opacity 0.5s 0.2s;
+  -moz-transition: -moz-transform 0.3s 0.2s, opacity 0.5s 0.2s;
+  transition: transform 0.3s 0.2s, opacity 0.5s 0.2s;
+  -ms-transition: -ms-transform 0.3s 0.2s, opacity 0.5s 0.2s;
+}
+#restaurant .square-header .title,
+#blog .square-header .title,
+#blog .square-header .title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0;
+}
+#restaurant .square-header .description,
+#blog .square-header .description,
+#blog .square-header .description {
+  font-size: 24px;
+  color: #9E9E9E;
+  font-weight: 200;
+  margin: 0;
+}
+#restaurant .square-header .description strong,
+#blog .square-header .description strong,
+#blog .square-header .description strong {
+  color: #fff;
+}
+#restaurant .square-post,
+#blog .square-post,
+#blog .square-post,
+#blog .square-post i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  padding: 15px 20px;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.5s;
+  -webkit-transform: translate(0, 10px);
+  -moz-transition: -moz-transform 0.3s, opacity 0.5s;
+  -moz-transform: translate(0, 10px);
+  -ms-transition: -ms-transform 0.3s, opacity 0.5s;
+  -ms-transform: translate(0, 10px);
+  /* transition: -webkit-transform 0.3s, opacity 0.5s; */
+  transform: translate(0, 10px);
+}
+#restaurant .square-post .title,
+#blog .square-post .title,
+#blog .square-post .title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0 0 5px 0;
+  line-height: 1em;
+}
+#restaurant .square-post .description,
+#blog .square-post .description,
+#blog .square-post .description {
+  font-size: 16px;
+  color: #9E9E9E;
+  font-weight: 200;
+  margin: 0;
+  line-height: 1.5em;
+}
+#restaurant .square-post .description strong,
+#blog .square-post .description strong,
+#blog .square-post .description strong {
+  color: #fff;
+}
+.carousel-control {
+  font-size: 88px;
+}
+.carousel-indicators {
+  bottom: 3px;
+}
+.carousel-indicators {
+  left: 94%;
+}

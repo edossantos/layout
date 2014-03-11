@@ -68,7 +68,7 @@
 
             // Mobile/Tablet Logic
             if((/iPhone|iPod|iPad|Android|BlackBerry|Opera Mini|IEMobile/).test(ua)) {
-
+                console.log("mobile");
                 // Mobile/Tablet CSS and JavaScript files to load
                 filesToLoad = {
                     // CSS file that is loaded when in development mode
@@ -76,11 +76,11 @@
                     // CSS file that is loaded when in production mode
                     "prod-css": "css/mobile.min.css",
                     // Require.js configuration file that is loaded when in development mode
-                    "dev-js": { "data-main": "assets/js/config.js", "src": "assets/js/vendor/require.js" },
+                    //"dev-js": { "data-main": "assets/js/config.js", "src": "assets/js/vendor/require.js" },
                     // JavaScript initialization file that is also loaded when in development mode
-                    "dev-init": "js/app/init/MobileInit.js",
+                    "dev-init": "assets/js/init/MobileInit.js",
                     // JavaScript file that is loaded when in production mode
-                    "prod-init": "js/app/init/MobileInit.min.js",
+                    //"prod-init": "assets/js/vendor/main.js",
                     "prod-js": { "data-main": "assets/js/config.js", "src": "assets/js/vendor/require.js" }
                 };
 
@@ -88,7 +88,7 @@
 
             // Desktop Logic
             else {
-
+                console.log("Destop");
                 // Desktop CSS and JavaScript files to load
                 filesToLoad = {
                     // CSS file that is loaded when in development mode
@@ -98,9 +98,9 @@
                     // Require.js configuration file that is also loaded when in development mode
                     "dev-js": { "data-main": "assets/js/config.js", "src": "assets/js/vendor/require.js" },
                     // JavaScript initialization file that is loaded when in development mode
-                    "dev-init": "js/app/init/DesktopInit.js",
+                    "dev-init": "assets/js/init/DesktopInit.js",
                     // JavaScript file that is loaded when in production mode
-                    //"prod-init": "js/app/init/DesktopInit.js",
+                    //"prod-init": "assets/js/vendor/main.js",
                     "prod-js": { "data-main": "assets/js/config.js", "src": "assets/js/vendor/require.js" }
                 };
 

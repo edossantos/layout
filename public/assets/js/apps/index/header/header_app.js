@@ -1,49 +1,20 @@
-define(["app"], function(layoutApp){
-	layoutApp.module("IndexApp", function(IndexApp, layoutApp, Backbone, Marionette, $, _){
-		IndexApp.Router = Marionette.AppRouter.extend({
-			appRoutes: {
-				"": "showIndex",
-				"index": "showIndex",
-				"about": "showAbout",
-				"menu": "showMenu"
+define(["app", "apps/index/header/list/list_controller"], function(layoutApp, ListController){
+	layoutApp.module("HeaderApp", function(Header, layoutApp, Backbone, Marionette, $, _){
+		var API = {
+			listHeader: function(){
+				ListController.listHeader();
 			}
-			});
-			var API = {
-				showIndex: function(){
-					require(["apps/index/header/header_controller", "apps/index/home/home_controller"], 
-						function(ShowController, HomeController){
-						ShowController.showHeader();
-						HomeController.showHome();
-						
-					});
-				},
-				showAbout: function(){
-					require(["apps/index/header/header_controller", "apps/index/about/about_controller" ], function(ShowController, AboutController){
-						ShowController.showHeader();
-						AboutController.showAbout();
-						console.log("about yo");
-					});
-				},
-				showMenu: function(){
-					require(["apps/index/header/header_controller", "apps/index/menu/menu_controller"], function(ShowController, MenuController){
-						ShowController.showHeader();
-						MenuController.showMenus();
-						console.log("menu yo");
-					});
-				}
-
-			};
-			layoutApp.on('index:layout', function(){
-				console.log("index from index_app.js");
-				API.showIndex();
-				
-			});
-			layoutApp.addInitializer(function(){
-      			new IndexApp.Router({
-        		controller: API
-     			 });
-  			});
+		};
+		layoutApp.commands.setHandler("set:active:header", function(name){
+			ListController.setActiveHeader(name);
+			
 		});
+
+		layoutApp.on("start", function(){
+			API.listHeader();
+		});
+
+	});
 	
-	return layoutApp.IndexApp;
+	return layoutApp.HeaderApp;
 });
