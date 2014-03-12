@@ -4,7 +4,7 @@ define(["app", "handlebars", "text!apps/reservation/list/templates/reservation.h
 	,function(layoutApp, Handlebars, reservationTpl){
 		layoutApp.module("ReservationApp.Reservation.View", function(View, layoutApp, Backbone, Marionette, $, _){
 			View.Reservation = Backbone.Marionette.ItemView.extend({
-				className: "container",
+				className: "container reservation",
 				template: Handlebars.compile(reservationTpl),
 				events: {
 					"click #inputDate": "getDate",

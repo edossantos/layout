@@ -11,7 +11,7 @@ define(["marionette"], function(Marionette){
 	
 	layoutApp.addRegions({
 		HeaderRegion: "#header-region",
-		mainRegion: "#main-region",
+		mainRegion:   "#main-region",
 		FooterRegion: "#footer-region"
 	});
 

@@ -94,7 +94,7 @@
                     // CSS file that is loaded when in development mode
                     "dev-css": "css/desktop.css",
                     // CSS file that is loaded when in production mode
-                    "prod-css": "css/desktop.css",
+                    "prod-css": "css/desktop.mim.css",
                     // Require.js configuration file that is also loaded when in development mode
                     "dev-js": { "data-main": "assets/js/config.js", "src": "assets/js/vendor/require.js" },
                     // JavaScript initialization file that is loaded when in development mode
