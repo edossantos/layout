@@ -1,0 +1,60 @@
+//Variables for about page
+@base-color: #c71e1e;
+@white: #fff;
+#header-region {
+	-webkit-transition: all .2s ease-in-out;
+	background: url("../images/slide8.jpg")no-repeat center;
+
+}
+.transition{
+	-webkit-transform: scale(1.1);	
+}
+#brand-style {
+	text-align: center;
+	margin-top: 0px;
+	img{
+	width: 450px;
+	height: 200px;
+	margin-bottom: 3%;
+}
+}
+.menu-fixed {
+	background: url("../images/slide8.jpg")no-repeat;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	ul {
+	padding-left: 395px;
+	}
+}
+.container-full {
+	margin: 0 auto;
+	width: 100%;
+}
+.container-fluid {
+  padding-left: 298px!important;
+  padding-right: 15px;
+  margin-top: -3%;
+}
+#main{
+	z-index: 901;
+	display: block;
+
+}
+#main li{
+	background-color: @base-color;
+	font-size: 20px;
+	margin-left: 10px;
+	a{
+	color: #FFE4C4;
+	}
+	&.active a{
+	color: #4d4d4d;
+	}
+}
+
+.navbar-default {
+  background-color: transparent!important;
+  border-color: transparent!important; 
+}
