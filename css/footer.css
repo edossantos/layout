@@ -1,0 +1,46 @@
+.footer-style {
+  background: #c71e1e;
+  width: 100%;
+  height: 150px;
+  padding-top: 31px;
+}
+.center-page-style {
+  margin-bottom: 30px;
+}
+#copyright {
+  border-top: 2px solid #ffffff;
+  text-align: center;
+  padding-top: 14px;
+  margin-top: 20px;
+  color: #FFE4C4;
+}
+#copyright a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+.subscribe {
+  margin-left: 100px;
+}
+.subscribe h4 {
+  color: #FFE4C4;
+  font-family: 'Original Surfer', cursive;
+  padding-bottom: 11px;
+}
+#social-network {
+  margin-top: 23px;
+}
+#social-network ul li {
+  display: inline;
+}
+#social-network li a {
+  color: #FFE4C4;
+}
+#social-network li a :hover {
+  color: #FFE4C8;
+  cursor: pointer;
+  -webkit-transition: color 2s ease-out;
+  -moz-transition: color 2s ease-out;
+  -o-transition: color 2s ease-out;
+  transition: color 2s ease-out;
+}
