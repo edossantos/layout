@@ -24,8 +24,10 @@ define(["app", "apps/menu/list/list_controller"], function(layoutApp, ListContro
 			}
 			var API = {
 			listMenu: function(){
+				;
 				require(["apps/menu/list/list_controller"], function(showController){
 					executeAction(showController.listMenu);
+
 				});
 				
 			}

@@ -27,6 +27,7 @@ define(["app"], function(layoutApp){
 				showAbout: function(){
 					require(["apps/about/show/show_controller"], function(ShowController){
 						executeAction(ShowController.showAbout);
+					
 						
 					});
 				}

@@ -20,9 +20,46 @@ define(["app", "apps/menu/list/list_view"], function(layoutApp, View){
 					menuListLayout.desertRegion.show(menuDessert);
 						
 				});
+				menuAppertizer.on("itemview:menu:show", function(childView, model){
+	                 require(["apps/dialog/view"], function(DialogView){
+	                  var view = new DialogView.Menu({
+	                    model: model
+	                  });
+	                  layoutApp.dialogRegion.show(view);
+	                  });
+	            });
+	            menuLunch.on("itemview:menu:show", function(childView, model){
+	                 require(["apps/dialog/view"], function(DialogView){
+	                  var view = new DialogView.Menu({
+	                    model: model
+	                  });
+	                  layoutApp.dialogRegion.show(view);
+	                  });
+	            });
+
+	            menuDinner.on("itemview:menu:show", function(childView, model){
+	                 require(["apps/dialog/view"], function(DialogView){
+	                  var view = new DialogView.Menu({
+	                    model: model
+	                  });
+	                  layoutApp.dialogRegion.show(view);
+	                  });
+	            });
+	            menuDessert.on("itemview:menu:show", function(childView, model){
+	                 require(["apps/dialog/view"], function(DialogView){
+	                  var view = new DialogView.Menu({
+	                    model: model
+	                  });
+	                  layoutApp.dialogRegion.show(view);
+	                  });
+	            });
+
+
 
 				layoutApp.mainRegion.show(menuListLayout);
+				
 				});
+				
 			}
 		};
 	});

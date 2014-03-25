@@ -1,0 +1,74 @@
+//my variables
+@body-background: "../images/food.png";
+@header-region-img: "../images/slide8.jpg";
+
+@base-color: #c71e1e;
+@nav-a-href-font-color: #FFE4C4;
+@nav-a-href-font-color-active: #4d4d4d;
+@white: #ffffff;
+@cream-color: #FFE4C4;
+
+@block: block;
+@none: none;
+@fixed: fixed;
+@absolute: absolute;
+@important: !important;
+
+
+
+@opacity1: 1;
+@opacity09: 0.9;
+/* header variables */
+
+@mobile-brand-display: "";
+@brand-display: "";
+@brand-margin-top: "";
+@brand-margin-left: "";
+
+@header-navbar-left: "";
+@header-navbar-top: "";
+
+@header-display: "";
+@header-opacity: "";
+
+@nav-position: "";
+@navbar-nav-margin-left: "";
+
+@menu-fixed-display: "";
+
+/* Menu variables */
+//100px default
+@menu-well-height: 100px;
+@menu-h2-font-size: "";
+
+
+.menu-fixed() {
+  background: url(@body-background) repeat;
+  border-top: 1px solid #CFCACA;
+  box-shadow: inset 0 1px #fff, 0 1px 3px rgba(34,25,25,0.4);
+  -moz-box-shadow: inset 0 1px #fff, 0 1px 3px rgba(34,25,25,0.4);
+  -webkit-box-shadow: inset 0 1px #fff, 0 1px 3px rgba(34,25,25,0.4);
+  position: fixed;
+  width: 100%;
+  top: -6%;
+  left: 0;
+  ul{
+    margin-left: 30%!important;
+    padding-bottom: 1%!important;
+  }
+}
+
+  .row(@m-left, @m-right) {
+    margin-left: @m-left@important;
+    margin-right: @m-right@important;
+}
+.row-self-mix() {
+margin-left: -15px;
+margin-right: -15px;
+}
+
+@m-left: "";
+@m-right: "";
+
+/* footer var */
+@to-top-var: "";

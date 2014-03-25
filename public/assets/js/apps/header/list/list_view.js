@@ -9,6 +9,7 @@ define(["app", "handlebars", "text!apps/header/list/templates/list.html",
 			},
 			navigate: function(e){
 				e.preventDefault();
+				$(window).scrollTop(0,0);
 				this.trigger("navigate", this.model);
 			},
 			onRender: function(){
@@ -21,20 +22,24 @@ define(["app", "handlebars", "text!apps/header/list/templates/list.html",
 			template: Handlebars.compile(listTpl),
 			className: "container",
 			itemView: View.Header,
-			itemViewContainer: "ul#main",
+			itemViewContainer: "ul#main-js",
 			events: {
 				"click a.brand": "brandClicked",
 				"click .nav a": "closeMenu",
-				"click .navbar-toggle": "doTransition"
+				"click .navbar-toggle": "doTransition",
+				"click #backgroundPopup": "closeMenu"
+
 				
 
 			},
 			initialize: function(){
 				 $(window).scroll(function(){
-            if ($(window).scrollTop() > 450){
-    	        $("#main").addClass("menu-fixed ");
-            } else if ($(window).scrollTop() < 450) {
+            if ($(window).scrollTop() > 350){
+    	        $("#main").addClass("menu-fixed");
+    	        
+            } else if ($(window).scrollTop() < 350) {
                 $("#main").removeClass("menu-fixed ");
+               
             }
         });
 			},
@@ -49,9 +54,15 @@ define(["app", "handlebars", "text!apps/header/list/templates/list.html",
 				 if($('.navbar-toggle').css('display') !='none'){
             		$(".navbar-toggle").trigger( "click" );
         		}
+        		$("#backgroundPopup").fadeOut("normal");
 			},
 			doTransition: function(){
-				//$("#header-region").toggleClass("transition");
+				if($("#backgroundPopup").css('display') == 'none'){
+					$("#backgroundPopup").css("opacity", "0.7"); 
+					$("#backgroundPopup").fadeIn(0001);
+				}else{
+					$("#backgroundPopup").fadeOut("normal");
+				}
 			}
 
 		});
