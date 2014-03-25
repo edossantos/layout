@@ -39,9 +39,7 @@ define(["app", "backbone.picky"], function(layoutApp){
     layoutApp.reqres.setHandler("header:entities", function(){
       return API.getHeaders();
     });
-    layoutApp.reqres.setHandler("footer:entities", function(){
-      return API.getHeaders();
-    });
+    
   });
 
   return ;

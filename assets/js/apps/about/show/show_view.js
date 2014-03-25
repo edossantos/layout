@@ -6,7 +6,7 @@ define(["app", "handlebars",
 		,function(layoutApp, Handlebars, aboutLayoutTpl, aboutTpl, testimonialsTpl, testimonialTpl){
 	layoutApp.module("AboutApp.About.View", function(View, layoutApp, Backbone, Marionette, $, _){
 		View.About = Backbone.Marionette.ItemView.extend({
-			
+			className: "about",
 			template: Handlebars.compile(aboutTpl)
 		});
 		View.Testimonial = Marionette.ItemView.extend({
@@ -15,7 +15,7 @@ define(["app", "handlebars",
 		});
 		View.Testimonials = Marionette.CompositeView.extend({
 			template: Handlebars.compile(testimonialsTpl),
-			
+			className: "about-test",
 			itemView: View.Testimonial,
 			itemViewContainer: "ul#testimonial-list"
 		});
@@ -25,6 +25,7 @@ define(["app", "handlebars",
 		View.AboutLayout = Marionette.Layout.extend({
 			template: Handlebars.compile(aboutLayoutTpl),
 			className: "container",
+			id: "about",
 			regions: {
 				testimonialRegion: "#testimonial-region",
 				aboutRegion: "#about-region"

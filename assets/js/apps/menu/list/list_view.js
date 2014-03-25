@@ -19,7 +19,16 @@ define(["app", "handlebars",
 			//Appertizer Menu
 			View.MenuAppertizer = Marionette.ItemView.extend({
 				template: Handlebars.compile(menuAppertizerItemTpl),
-				tagName: "li"
+				tagName: "li", 
+				events: {
+					"click a": "showDialogMenu"
+				},
+				showDialogMenu: function(e){
+					e.preventDefault();
+					e.stopPropagation();
+					console.log(this.model);
+        			this.trigger("menu:show", this.model);
+				}
 			});
 			View.MenuAppertizerList = Marionette.CompositeView.extend({
 				template: Handlebars.compile(menuAppertizerTpl),
@@ -32,7 +41,16 @@ define(["app", "handlebars",
 			//Lunch Menu
 			View.MenuLunch = Marionette.ItemView.extend({
 				template: Handlebars.compile(menuLunchItemTpl),
-				tagName: "li"
+				tagName: "li",
+				events: {
+					"click a": "showDialogMenu"
+				},
+				showDialogMenu: function(e){
+					e.preventDefault();
+					e.stopPropagation();
+					console.log(this.model);
+        			this.trigger("menu:show", this.model);
+				}
 			});
 			View.MenuLunchList = Marionette.CompositeView.extend({
 				template: Handlebars.compile(menuLunchTpl),
@@ -45,7 +63,16 @@ define(["app", "handlebars",
 			//Dinner Menu
 			View.MenuDinner = Marionette.ItemView.extend({
 				template: Handlebars.compile(menuDinnerItemTpl),
-				tagName: "li"
+				tagName: "li",
+				events: {
+					"click a": "showDialogMenu"
+				},
+				showDialogMenu: function(e){
+					e.preventDefault();
+					e.stopPropagation();
+					console.log(this.model);
+        			this.trigger("menu:show", this.model);
+				}
 			});
 			View.MenuDinnerList = Marionette.CompositeView.extend({
 				template: Handlebars.compile(menuDinnerTpl),
@@ -58,7 +85,16 @@ define(["app", "handlebars",
 			//Desert Menu
 			View.MenuDessert = Marionette.ItemView.extend({
 				template: Handlebars.compile(menuDessertItemTpl),
-				tagName: "li"
+				tagName: "li",
+				events: {
+					"click a": "showDialogMenu"
+				},
+				showDialogMenu: function(e){
+					e.preventDefault();
+					e.stopPropagation();
+					console.log(this.model);
+        			this.trigger("menu:show", this.model);
+				}
 			});
 			View.MenuDessertList = Marionette.CompositeView.extend({
 				template: Handlebars.compile(menuDessertTpl),
@@ -73,6 +109,7 @@ define(["app", "handlebars",
 			View.MenuLayout = Marionette.Layout.extend({
 				template: Handlebars.compile(menuLayoutTpl),
 				className: "container",
+				id: "menu",
 				regions: {
 					appertizerRegion: "#appertizerMenu",
 					lunchRegion: "#lunchMenu",
