@@ -7,7 +7,8 @@ define(["app", "apps/header/list/list_view"], function(layoutApp, View){
           var headers = new View.Headers({collection: links});
 
           headers.on("brand:clicked", function(){
-            layoutApp.trigger("contacts:list");
+
+            layoutApp.trigger("index:layout");
           });
 
           headers.on("itemview:navigate", function(childView, model){

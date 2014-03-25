@@ -1,9 +1,9 @@
-define(["marionette"], function(Marionette){
+define(["marionette", "config/marionette-regions/dialog"], function(Marionette){
 
 	var layoutApp = new Marionette.Application();
 	//adding effect to the view change, fadeIn "slow"
 	Marionette.Region.prototype.open = function(view){
-	  $(window).scrollTop();
+	  
 	  this.$el.hide();
 	  this.$el.html(view.el);
 	  this.$el.fadeIn( "slow", "linear" );
@@ -12,7 +12,10 @@ define(["marionette"], function(Marionette){
 	layoutApp.addRegions({
 		HeaderRegion: "#header-region",
 		mainRegion:   "#main-region",
-		FooterRegion: "#footer-region"
+		FooterRegion: "#footer-region",
+		dialogRegion: Marionette.Region.Dialog.extend({
+      		el: "#dialog-region"
+    	})
 	});
 
 	///Navigate Backbone History
@@ -46,7 +49,7 @@ define(["marionette"], function(Marionette){
 
 		 if(Backbone.history){
 		 	//require files app from each app
-		 	require(["apps/home/home_app", "apps/about/about_app", "apps/menu/menu_app", "apps/reservation/reservation_app"]
+		 	require(["apps/home/home_app", "apps/about/about_app", "apps/menu/menu_app", "apps/reservation/reservation_app", "apps/contact/contact_app"]
 		 	, function(){
 		 	Backbone.history.start();
 		 	if(layoutApp.getCurrentRoute() === ""){
@@ -60,6 +63,8 @@ define(["marionette"], function(Marionette){
 	 				layoutApp.trigger("menus:layout");
 	 			}else if(layoutApp.getCurrentRoute() === "reservation"){
 	 				layoutApp.trigger("reservation:layout");
+	 			}else if(layoutApp.getCurrentRoute() === "contact"){
+	 				layoutApp.trigger("contact:layout");
 	 			}
 		 });
 		 }

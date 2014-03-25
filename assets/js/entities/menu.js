@@ -38,10 +38,10 @@ define(["app"], function(layoutApp){
 			{id: 17, name: "TILAPIA NOCCIOLA", type: "dinner", desc:"Lightly breaded with hazelnuts, topped with roma tomatoes and our housemade basil lemon butter sauce", img: "images/menu/dinner/TILAPIA-NOCCIOLA.jpg"},
 			{id: 18, name: "WOOD-GRILLED SALMON", type: "dinner", desc:"Topped with tomato basil vinaigrette", img: "images/menu/dinner/WOOD-GRILLED-SALMON.jpg"},
 
-			{id: 19, name: "Sogno Di Cioccolata 'Chocolate Dream'", type: "dessert", desc: "A rich fudge brownie, with chocolate mousse, fresh whipped cream and homemade chocolate sauce.", img: "images/menu/dessert/dolci.jpg"},
-			{id: 20, name: "Tiramisú", type: "dessert", desc: "Lady fingers dipped in liqueur laced espresso, layered with sweetened mascarpone, Myers’s Rum and chocolate shavings",img: "images/menu/dessert/tiramisu.jpg"},
-			{id: 21, name: "Dessert Rosa", type: "dessert", desc: "Delicious butter cake topped with pastry cream, bananas, strawberries, pineapple and whipped cream", img: "images/menu/dessert/Dessert-Rosa.jpg"},
-			{id: 22, name: "Chocolate Truffle Pie", type: "dessert", desc: "This decadently rich pie features dark chocolate cookie crumb crust, a layer of chocolate ganache, and dark chocolate silk topped off with chocolate whipped cream, chocolate curls and a drizzle of chocolate and raspberry", img: "images/menu/dessert/chocolate-strawberry-truffle-pie.jpg"}
+			{id: 19, name: "SOGNO DI CIOCCOLATA 'CHOCOLATE DREAM'", type: "dessert", desc: "A rich fudge brownie, with chocolate mousse, fresh whipped cream and homemade chocolate sauce.", img: "images/menu/dessert/dolci.jpg"},
+			{id: 20, name: "TIRAMISÚ", type: "dessert", desc: "Lady fingers dipped in liqueur laced espresso, layered with sweetened mascarpone, Myers’s Rum and chocolate shavings",img: "images/menu/dessert/tiramisu.jpg"},
+			{id: 21, name: "DESSERT ROSA", type: "dessert", desc: "Delicious butter cake topped with pastry cream, bananas, strawberries, pineapple and whipped cream", img: "images/menu/dessert/Dessert-Rosa.jpg"},
+			{id: 22, name: "CHOCOLATE TRUFFLE PIE", type: "dessert", desc: "Dark chocolate cookie crumb crust, a layer of chocolate ganache, with chocolate whipped cream and a drizzle of chocolate and raspberry", img: "images/menu/dessert/chocolate-strawberry-truffle-pie.jpg"}
 			
 			]);
 
