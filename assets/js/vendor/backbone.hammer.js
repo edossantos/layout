@@ -2,10 +2,8 @@
   // Set up Backbone appropriately for the environment.
   if (typeof define === 'function' && define.amd) {
     // AMD
-    // -- a fix define(['underscore', 'backbone', 'hammerjs', 'hammer.jquery'], function(_, Backbone) {
-      define(['underscore', 'backbone', 'hammer.jquery'], function(_, Backbone) {
+    define(['underscore', 'backbone', 'hammerjs'], function(_, Backbone) {
       factory(root, _, Backbone);
-      
     });
   } else {
     // Browser globals
@@ -16,8 +14,6 @@
 
   if( !$.fn.hammer ){
     throw new Error('Hammer jQuery plugin not loaded.');
-  }else{
-    console.log("here");
   }
 
   var delegateEventSplitter = /^(\S+)\s*(.*)$/;
